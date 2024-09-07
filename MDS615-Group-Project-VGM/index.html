@@ -1,46 +1,310 @@
-# This is the main HTML file that serves as the entry point for the web application.
+
+<!--IDK no means word-->
+<p class="text-center p-1">
+    <small class="text-Secondary" >This is the main HTML file that serves as the entry point for the web application.</small>
+</p>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Scaffold</title>
+    <title>MDS615-Group Assessment-2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!--这个是给fullcalendar 用的链接-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+   
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
+
+<!--基于bootstrap5  https://getbootstrap.com/docs/5.0/content/reboot/-->
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#" id="home-link">Home</a></li>
-                <li><a href="#" id="calendar-link">Calendar</a></li>
-                <li><a href="#" id="music-link">Music Player</a></li>
-            </ul>
+
+    <!--导航栏和四个摁钮-->
+    <header class="bg-primary py-3">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand text-light d-flex" href="#">MDS615-Group</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#" id="home-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#" id="calendar-link">Calendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#" id="music-link">Music Player</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#" id="contact-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
+    
+    <!--开始的头部加图片部分-->
+    <section class="p-5 text-center text-sm-start"> <!--padding-->
+        <div class="container">
+            <div class="d-flex"><!--display flex 自动排列-->
+                <div>
+                    <h1>
+                        What is <span class="text-warning"> CLOUND COMPUTING</span> ?
+                    </h1>
+                    <p class="my-5"> <!--margin-top margin-bottom-->
+                        Cloud computing is a technology that delivers computing resources (such as storage and processing power) over the
+                        internet, without the need for users to purchase or maintain physical hardware. It allows for on-demand resource usage,
+                        improving efficiency and flexibility. The key advantages of cloud computing include scalability, cost-efficiency, and
+                        global accessibility.
+                    </p>
+                    <button class="btn btn-primary btn-lg"> we are great! </button>
+                </div>
 
-    <main id="content">
-        <section id="home">
-            <h1>Welcome to the Web Scaffold</h1>
-            <p>This is a basic scaffold for your web application. Use the navigation to access different features.</p>
+                <img src="./img/big2.gif" alt="showcase" class="w-50 p-5">
+    
+            </div>
+    
+    
+    
+        </div>
+    </section>
+
+    <main class=" mt-4">
+
+        <!--中间的间隔蓝色条,为了好看-->
+        <section class="p-5 bg-primary text-light">
+            <div class="container">
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <h3 class="">please put you image for us please put you image for us</h3>
+                    <div>
+                        <div class="input-group new-input p-1">
+                            <input type="text" class="form-control" placeholder="put you message">
+                            <button class="btn btn-dark btn-lg">login</button>
+                        </div>
+                    </div>
+                </div>
+        
+        
+            </div>
         </section>
 
-        <section id="calendar" style="display:none;">
-            <h2>Calendar</h2>
-            <p>Placeholder for the calendar feature.</p>
-            <!-- Calendar content will be added here -->
+        <section id="home" class="lead">
+            <div class="div py-5 text-center">
+                <h3 class="py-3"> What are the key characteristics of cloud computing? </h3>
+                <p6>
+                    <small class="text-Secondary">Cloud computing allows users to access computing resources on demand via the
+                        Internet. It offers flexibility by
+                        automatically scaling resources based on varying workloads, helping users adapt easily. Multiple users
+                        can share the
+                        same physical infrastructure while keeping their data secure and isolated. Instead of buying hardware,
+                        users pay only
+                        for the resources they actually use, reducing costs. There are three main models of cloud computing:
+                        IaaS, PaaS, and
+                        SaaS, each offering different levels of service and management.</small>
+                </p6>
+            </div>
+        
+            <div class="container"></div>
+            <div class="row justify-content-center text-center ms-auto d-md-flex"> <!--gap-->
+        
+                <!-- 第一块 组块-->
+                <div class="card-1" style="width: 18rem; margin: 15px;">
+                    <img src="./img/1.jpg" class="card-img-top" alt="sorry, I missed">
+                    <div class="card-body">
+                        <h3 class="card-title p-3">LAAS</h3>
+                        <h6 class="card-title text-primary p-3">Advantage:</h6>
+                        <h6 class="card-text">Flexibility and Scalability</h6>
+                        <h6 class="card-text">Cost-Effectiveness</h6>
+                        <h6 class="card-text">Rapid Deployment</h6>
+                        <h6 class="card-text">Flexibility and Scalability</h6>
+                        <h6 class="card-title text-primary p-3">Weaknesses:</h6>
+                        <h6 class="card-text">Complex Management</h6>
+                        <h6 class="card-text">Dependency</h6>
+                        <h6 class="card-text">Security and Compliance Challenges</h6>
+                    </div>
+                    <!-- 暂时先不用
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">An item</li>
+                                    <li class="list-group-item">A second item</li>
+                                    <li class="list-group-item">A third item</li>
+                                </ul>
+                                -->
+                </div>
+        
+                <!-- 第二块 组块-->
+                <div class="card-2" style="width: 18rem; margin: 15px;">
+                    <img src="./img/2.jpg" class="card-img-top" alt="sorry, I missed">
+        
+                    <div class="card-body">
+                        <h3 class="card-title p-3">PAAS</h3>
+                        <h6 class="card-title text-primary p-3">Advantage:</h6>
+                        <h6 class="card-text">Development Efficiency</h6>
+                        <h6 class="card-text">Simplified Operations</h6>
+                        <h6 class="card-text">Scalability</h6>
+                        <h6 class="card-text">Built-in Integration</h6>
+                        <h6 class="card-title text-primary p-3">Weaknesses:</h6>
+                        <h6 class="card-text">Customization Limitations</h6>
+                        <h6 class="card-text">Vendor Lock-In</h6>
+                        <h6 class="card-text">Cost Complexity</h6>
+                    </div>
+                </div>
+        
+                <!-- 第三块 组块-->
+                <div class="card-3" style="width: 18rem; margin: 15px;">
+                    <img src="./img/3.jpg" class="card-img-top" alt="sorry, I missed">
+        
+                    <div class="card-body">
+                        <h3 class="card-title p-3 ">SAAS</h3>
+                        <h6 class="card-title text-primary p-3">Advantage:</h6>
+                        <h6 class="card-text">Ready-to-Use</h6>
+                        <h6 class="card-text">Automatic Maintenance</h6>
+                        <h6 class="card-text">Low Barrier to Entry</h6>
+                        <h6 class="card-text">Global Accessibility</h6>
+                        <h6 class="card-title text-primary p-3">Weaknesses:</h6>
+                        <h6 class="card-text">Limited Customization</h6>
+                        <h6 class="card-text">Data Control</h6>
+                        <h6 class="card-text">Dependency</h6>
+                    </div>
+                    <!-- 暂时先不用
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">An item</li>
+                                                <li class="list-group-item">A second item</li>
+                                                <li class="list-group-item">A third item</li>
+                                            </ul>
+                                            -->
+                </div>
+        
+        
+        
+        
         </section>
 
+        <!--calendar part not ready-->
+
+        <section id="calendar" style="display:none;" class="p-5">
+            
+            <h1 class="p-5"> Calendar </h1>
+
+            <div id='calendar-play' class="d-flex"></div>
+
+
+        </section>
+
+
+        <!--music part-->
         <section id="music" style="display:none;">
             <h2>Music Player</h2>
-            <p>Placeholder for the music player feature.</p>
-            <!-- Music player content will be added here -->
+            <div class="music-player-container">
+                <audio id="music-player" controls>
+                    <source src="./music/too late.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="playlist mt-3">
+                    <h5>Select a Song:</h5>
+                    <ul id="playlist" class="list-group">
+                        <li class="list-group-item" data-src="./music/naruto.mp3">naruto</li>
+                        <li class="list-group-item" data-src="./music/food.mp3">food</li>
+                        <li class="list-group-item" data-src="./music/too late.mp3">to late</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--group member introduction-->
+        <section id="contact" style="display:none;" class="p-5">
+            <div class="container">
+                <div class="row g-4 p-4"> <!--gap-->
+                    <div class="col-md ">
+                        <div class="card bg-dark text-light">
+                            <div class="card-body text-center">
+                                <div class="card-title">
+                                    <h4>
+                                        Gulnur
+                                    </h4>
+                                </div>
+                                <div class="card-text ">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam saepe
+                                    officia, quasi ipsa esse quia?
+                                </div>
+                                <a href="#" class="btn btn-primary mt-2 ">concent</a> <!--mt-2 ADD THE SPACE-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md ">
+                        <div class="card bg-secondary text-light">
+                            <div class="card-body text-center">
+                                <div class="card-title">
+                                    <h4>
+                                        Vincent
+                                    </h4>
+                                </div>
+                                <div class="card-text ">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam saepe
+                                    officia, quasi ipsa esse quia?
+                                </div>
+                                <a href="#" class="btn btn-primary mt-2">concent</a> <!--mt-2 ADD THE SPACE-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md ">
+                        <div class="card bg-dark text-light">
+                            <div class="card-body text-center">
+                                <div class="card-title">
+                                    <h4>
+                                        Mugi
+                                    </h4>
+                                </div>
+                                <div class="card-text ">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam saepe
+                                    officia, quasi ipsa esse quia?
+                                </div>
+                                <a href="#" class="btn btn-primary mt-2">concent</a> <!--mt-2 ADD THE SPACE-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+            <div class="container">
+                <h2 class="text-center mb-4">CONCECT US</h2>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">phone：04XXXXXX</li>
+                    <li class="list-group-item">Email： XXXXXXX@gmail.com</li>
+                </ul>
+            </div>
+
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Web Scaffold Project</p>
+
+    <!--foot -->
+    <footer class="p-5 bg-dark text-white text-center">
+        <div class="container">
+            <p class="lead">
+                <small class="text-light">Copyright &copy; 2024 SPI-MDS-615</small>
+            </p>
+        </div>
     </footer>
 
     <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
 </body>
 </html>
