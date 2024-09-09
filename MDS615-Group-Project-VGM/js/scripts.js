@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const musicLink = document.getElementById('music-link');
     const contactLink = document.getElementById('contact-link');
 
+
+
     const homeSection = document.getElementById('home');
     const calendarSection = document.getElementById('calendar');
     const musicSection = document.getElementById('music');
@@ -75,3 +77,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//这个下面是表单的内容部
+
+document.getElementById('commentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // 表单数据
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // 简单的 Ajax 请求，用于将表单数据发送给后台
+            fetch('submit_comment.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // 显示成功提示
+                        document.getElementById('successMessage').style.display = 'block';
+
+                        // 清空表单
+                        document.getElementById('commentForm').reset();
+                    } else {
+                        alert("There's a mistake.Type it in again, bro");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("There's a mistake.Type it in again, bro");
+                });
+        })
