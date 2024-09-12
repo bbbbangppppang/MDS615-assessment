@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     calendar.render();
 
-    // 音乐播放器播放列表功能
+    // Music player 音乐播放器播放列表功能
     const audioPlayer = document.getElementById('music-player');
     const playlistItems = document.querySelectorAll('#playlist .list-group-item');
 
