@@ -142,10 +142,13 @@
 
         <!--xxx: music part-->
         <section id="music" style="display:none;" class="container p-5">
-            <h2 class="p-4">Music Player</h2>
+            <h2 class="p-4">Music & Video Player</h2>
             <div class="music-player-container">
+        
+                <!-- 音乐播放器 -->
+                <h3>Music Player:</h3>
                 <audio id="music-player" controls>
-                    <source src="./music/too late.mp3" type="audio/mpeg">
+                    <source src="./music/too-late.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <div class="playlist mt-3">
@@ -153,8 +156,23 @@
                     <ul id="playlist" class="list-group d-md-flex">
                         <li class="list-group-item" data-src="./music/naruto.mp3">naruto</li>
                         <li class="list-group-item" data-src="./music/food.mp3">food</li>
-                        <li class="list-group-item" data-src="./music/too late.mp3">to late</li>
+                        <li class="list-group-item" data-src="./music/too late.mp3">too late</li>
                     </ul>
+                </div>
+        
+                <!-- 视频播放器 -->
+                <h3 class="mt-4">Video Player:</h3>
+                <div class="video-container">
+                    <div id="video-player"></div>
+                    <div class="playlist mt-3">
+                        <h5>Select a Video:</h5>
+                        <ul id="video-playlist" class="list-group d-md-flex">
+                            <li class="list-group-item" data-src="https://www.youtube.com/watch?v=YASXk7Pu8HA">Black Myth
+                                Wukong</li>
+                            <li class="list-group-item" data-src="https://www.youtube.com/watch?v=ILXrya5GJiY">Apologize
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -204,7 +222,7 @@
                         <div class="col-md-6 col-lg-3">
                             <div class="card bg-light">
                                 <div class="card-body text-center">
-                                    <img src="./img/Uranbileg-1.png" class="mb-3 rounded-circle img-fluid" style="max-width: 70%" />
+                                    <img src="./img/Uranbileg-1.jpg" class="mb-3 rounded-circle img-fluid" style="max-width: 70%" />
                                     <h3 class="card-title">Uranbileg</h3>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet consectetur
@@ -235,94 +253,100 @@
     
             <div class="container mt-5">
                 <h2>Feedback</h2>
-                <form id="commentForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Please enter your name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email"
-                            placeholder="Please enter your email address for feedback" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Please leave your message"
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <form id="commentForm" action="https://formspree.io/f/meojwznk" method="POST">
+                    <div class="mb-3"> <label for="name" class="form-label">Name:</label> <input type="text" class="form-control"
+                            id="name" name="name" placeholder="Please enter your name" required> </div>
+                    <div class="mb-3"> <label for="email" class="form-label">Email:</label> <input type="email" class="form-control"
+                            id="email" name="email" placeholder="Please enter your email address for feedback" required> </div>
+                    <div class="mb-3"> <label for="message" class="form-label">Message:</label> <textarea class="form-control"
+                            id="message" name="message" rows="3" placeholder="Please leave your message" required></textarea>
+                    </div> <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">Successfully!</div>
+                <div id="successMessage" class="alert alert-success mt-3" style="display:none;">Successfully submitted your
+                    feedback!</div>
             </div>
-
-
-        
-            <div class="container p-5">
-                <h2 class="text-center mb-4">CONTACT US</h2>
-
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">phone:04XXXXXX</li>
-                    <li class="list-group-item">Email:XXXXXXX@gmail.com</li>
-                </ul>
-            </div>
+            <script src="scripts.js"></script>
 
         </section>
         
     </main>
 
     <!--xxx: picture icon in the middle 中间的间隔蓝色条,为了好看-->
-    <section class=" bg-primary text-light">
+    <section class="bg-primary text-light">
         <div class="container">
-            <div class="d-md-flex justify-content-between align-items-center">
-                <div class="d-flex py-3">
-                    <img src="./img/python_icon.jpg" class="mb-3  img-fluid" style="width:100% " />
-                    <img src="./img/html_icon.jpg" class="mb-3  img-fluid" style="width:70% " />
-                    <img src="./img/R-icon.jpg" class="mb-3  img-fluid" style="width:70% " />
-                    <img src="./img/sql_icon.jpg" class="mb-3  img-fluid" style="width:90% " />
-                    <img src="./img/java_icon.jpg" class="mb-3  img-fluid" style="width:90% " />
-                    <img src="./img/linux_icon.jpg" class="mb-3  img-fluid" style="width:90% " />
-                    <img src="./img/macos_icon.jpg" class="mb-3  img-fluid" style="width:90% " />
-                    <img src="./img/cenos-icon.jpg" class="mb-3  img-fluid" style="width:90% " />
-                    <img src="./img/ubuntu_icon.jpg" class="mb-3  img-fluid" style="width:90% " />
-                    <img src="./img/windows_icon.jpg" class="mb-3 img-fluid" style="width:90% " />
-                </div>
+            <div class="d-flex justify-content-around align-items-center flex-wrap">
+                <img src="./img/python_icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/html_icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/R-icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/sql_icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/java_icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/linux_icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/macos_icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/cenos-icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/ubuntu_icon.jpg" class="mb-3 img-fluid" />
+                <img src="./img/windows_icon.jpg" class="mb-3 img-fluid" />
             </div>
-    
-    
         </div>
     </section>
+
+
+
 
     <!--xxx: 开始的头部加图片部  Unchangeable part-->
     <section class="p-5 text-center text-sm-start"> <!--padding-->
         <div class="container">
-            <div class="d-flex"><!--display flex 自动排列-->
-                <div>
+            <div class="row align-items-center"> <!-- 使用Bootstrap的row和col -->
+                <div class="col-md-6">
                     <h1>
                         What is <span class="text-warning"> CLOUD COMPUTING</span> ?
                     </h1>
                     <p class="my-5"> <!--margin-top margin-bottom-->
-                        Cloud Service is a technology that provides computing resources (such as storage and processing
-                        power) through the
-                        Internet, without the need for users to purchase or maintain physical hardware. It allows on-demand
-                        use of resources,
-                        helping to improve efficiency and flexibility. The core advantages of Cloud Service are high
-                        scalability,
-                        cost-effectiveness, and global accessibility.
+                        A defining characteristic of cloud computing is its ability to provide on-demand access to computing
+                        resources via the
+                        Internet, enabling users to utilize these resources at any time. This flexibility allows for
+                        automatic scaling of
+                        resources to meet varying demands, ensuring users can adapt to different workloads seamlessly. With
+                        cloud computing,
+                        users benefit from not having to invest in or maintain their own hardware infrastructure. Instead,
+                        they pay based on
+                        actual resource consumption, leading to significant cost reductions.
                     </p>
-                    <button class="btn btn-primary btn-lg"> we are great! </button>
+                    <p class="my-5"> <!--margin-top margin-bottom-->
+                        Another key advantage of cloud computing is its resource-sharing capability, which allows multiple
+                        users to
+                        concurrently utilize the same physical infrastructure while ensuring data isolation and security.
+                        This multi-tenant
+                        architecture is fundamental to cloud services. Cloud computing is broadly categorized into three
+                        primary models: IaaS
+                        (Infrastructure as a Service), PaaS (Platform as a Service), and SaaS (Software as a Service), each
+                        offering different
+                        levels of management and services to cater to various user needs.
+                    </p>
+
+                    <button class="btn btn-primary btn-lg"> We are great! </button>
                 </div>
-                <img src="./img/big2.gif" alt="showcase" class="w-50 p-5">
+                <div class="col-md-6">
+                    <img src="./img/big2.gif" alt="showcase" class="img-fluid p-5"> <!-- img-fluid 让图片响应式 -->
+                </div>
             </div>
         </div>
     </section>
 
+
     <!--foot -->
-    <footer class="p-5 bg-dark text-white text-center">
+    <footer class="p-3 bg-dark text-white text-center">
         <div class="container">
-            <p class="lead">
+            <div>
+                <p2> SYDNEY POLYTECHNIC INSTITUTE </p2> 
+            </div>
+            
+            <p2>
+                Telephone: +61 2 90576409   Email: info@spi.nsw.edu.au
+            </p2>
+                
+            <p class="lead"></p>
                 <small class="text-light">Copyright &copy; 2024 SPI-MDS-615</small>
             </p>
-        </div>
     </footer>
 
     <script src="js/scripts.js"></script>
